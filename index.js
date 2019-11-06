@@ -38,6 +38,8 @@ function translate(image,orientation,opts) {
     ctx.rotate(orientation.rotate*(Math.PI / 180));
     ctx.translate(-c.width*0.5,-c.height*0.5);
   }
+  ctx.fillStyle = '#FF0000';
+  ctx.fillRect(0, 0, c.width, c.height);
   ctx.drawImage(image,0,0,image.naturalWidth,image.naturalHeight,0,0,c.width,c.height);
   return c;
 };
